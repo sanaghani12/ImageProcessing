@@ -1,4 +1,4 @@
-# ImageProcessing
+# Mouse Motion Video Trimmer
 
 This project utilizes the OpenCV library for video editing.
 
