@@ -91,9 +91,9 @@ def trim_video(input_path, output_path):
     cv2.destroyAllWindows()
 
 def main():
-    input_dir = r'D:\DKE\LIN Hiwi\PythonProject\inputvideosT2'
-    output_dir = r'D:\DKE\LIN Hiwi\PythonProject\outputvideosT2'
-    trimmed_dir = r'D:\DKE\LIN Hiwi\PythonProject\trimmedvideosT2'
+    input_dir = r'D:\DKE\LIN Hiwi\PythonProject\inputvideos'
+    output_dir = r'D:\DKE\LIN Hiwi\PythonProject\outputvideos'
+    trimmed_dir = r'D:\DKE\LIN Hiwi\PythonProject\trimmedvideos'
 
     # Create the trimmed videos folder if it doesn't exist
     os.makedirs(trimmed_dir, exist_ok=True)
@@ -109,7 +109,7 @@ def main():
 
             # Process the trimmed video
             for i in range(3):
-                side_name = ['top', 'middle', 'bottom'][i]
+                side_name = ['left', 'center', 'right'][i]
                 output_path = os.path.join(output_dir, f'{base_name}_{side_name}.mp4')
                 extract_side(trimmed_path, output_path, i)
 if __name__ == '__main__':
